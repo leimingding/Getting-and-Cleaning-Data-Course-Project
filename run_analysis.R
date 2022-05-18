@@ -7,6 +7,8 @@ y_test <- read.table("~/Desktop/UCI HAR Dataset/test/Y_test.txt")
 subject_train <- read.table("~/Desktop/UCI HAR Dataset/train/subject_train.txt")
 x_train <- read.table("~/Desktop/UCI HAR Dataset/train/X_train.txt")
 y_train <- read.table("~/Desktop/UCI HAR Dataset/train/Y_train.txt")
+head(features, 10)
+head(activities)
 
 ## merge the training and the test sets
 ## have a look at the data and the dimensions of the data
@@ -67,3 +69,9 @@ Tidy_Data <- Tidy_Data[order(Tidy_Data$Subject,Tidy_Data$Activity),]
 write.table(Tidy_Data, file = "Tidy.txt", row.names = FALSE)
 Tidy_Data
 dim(Tidy_Data)
+
+
+
+
+
+
